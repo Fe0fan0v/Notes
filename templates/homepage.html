@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="jumbotron text-center" style="padding-top: 5%">
+        <h1><span class="element"></span></h1><span class="typed-cursor"></span>
+        <i><h4>- Потому что вы можете сохранить всё что угодно...</h4></i>
+        <br>
+        <br>
+        <h3>На данный момент зарегистрировано {{ session['user_count'] }} пользователей.</h3>
+    </div>
+
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center slideanim">
+                <h2 class="section-heading">О нас</h2>
+                <hr style="max-width:50px;border-top: 2px solid #2E3134;"><br>
+            </div><!-- ./column -->
+        </div><!-- ./row -->
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-12 co-xs-12 text-center">
+                <h3><label><b>Легко использовать</b></label></h3>
+                <h4>
+                    <p class="text-justify" style="padding-top: 10px;">
+                        Приложение настолько просто в использовании, что даже дети смогут им пользоваться!!
+                    </p>
+                </h4>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-sm-12 co-xs-12 text-center">
+                <h3><label><b>Будь организованным</b></label></h3>
+                <h4>
+                    <p class="text-justify" style="padding-top: 10px;">
+                        С лёгким поиском и организацией вы более продуктивны.
+                    </p>
+                </h4>
+            </div>
+
+            <div class="col-md-4 col-lg-4 col-sm-12 co-xs-12 text-center">
+                <h3><label><b>Поддержка Markdown</b></label></h3>
+                <h4>
+                    <p class="text-justify" style="padding-top: 10px;">
+                        С поддержкой Markdown легко писать заметки с форматированием расширенного текста
+                    </p>
+                </h4>
+            </div>
+        </div> <!-- ./row -->
+    </div> <!-- ./cotainer -->
+{% endblock %}
