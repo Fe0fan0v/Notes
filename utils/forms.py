@@ -7,7 +7,7 @@ from wtforms import validators
 class LoginForm(FlaskForm):
     username = TextField('Имя*', [validators.Required("Введите имя.")])
     password = PasswordField('Пароль*', [validators.Required("Введите пароль.")])
-    submit = SubmitField('Login')
+    submit = SubmitField('Войти')
 
 
 class SignUpForm(FlaskForm):
@@ -16,7 +16,7 @@ class SignUpForm(FlaskForm):
     password = PasswordField('Пароль*', [validators.Required("Введите пароль"),
                                          validators.EqualTo('confirm_password', message='Пароли должны совпадать')])
     confirm_password = PasswordField('Подтвердить пароль*', [validators.Required("Подтвердите пароль")])
-    submit = SubmitField('Signup')
+    submit = SubmitField('Регистрация')
 
 
 class AddNoteForm(FlaskForm):
@@ -24,21 +24,21 @@ class AddNoteForm(FlaskForm):
     note_title = TextField('Заголовок записи:', [validators.Required("Введите заголовок записи.")])
     note = PageDownField('Ваша запись:')
     tags = SelectMultipleField('Tagи записи:')
-    submit = SubmitField('Add Note')
+    submit = SubmitField('Добавить запись')
 
 
 class AddTagForm(FlaskForm):
     tag = TextField('Введите tag:', [validators.Required("Введите tag")])
-    submit = SubmitField('Add Tag')
+    submit = SubmitField('Добавить Tag')
 
 
 class ChangeEmailForm(FlaskForm):
     email = TextField('Email*', [validators.Required("Введите email"), validators.Email('Некорректный формат Email')])
-    submit = SubmitField('Update Email')
+    submit = SubmitField('Обновить Email')
 
 
 class ChangePasswordForm(FlaskForm):
     password = PasswordField('Пароль*', [validators.Required("Введите пароль"),
                                          validators.EqualTo('confirm_password', message='Пароли должны совпадать')])
     confirm_password = PasswordField('Подтверждение пароля*', [validators.Required("Подтвердите пароль")])
-    submit = SubmitField('Update Password')
+    submit = SubmitField('Обновить пароль')
